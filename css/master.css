@@ -1,0 +1,270 @@
+/**######## GLOBAL STYLES #########**/
+ body{
+     font-family: 'Lato', sans-serif;
+}
+
+.container{
+    width: 80%;
+    margin: 0 auto;
+}
+
+
+/** Removes the blue out from the smothscroll script **/
+ section:focus{
+   outline:0 !important;
+}
+
+
+ section{
+     height: 100vh;
+     padding: 70px 0 0 0;
+     background-color: rgba(148, 125, 60, 0.25);
+}
+
+/** Sections main title styling **/
+ .maintitle{
+     color: #fff;
+     font-family: 'Cormorant Garamond';
+     border-bottom: 3px solid #FF9800;
+     font-size: 35px;
+     font-weight: 600;
+     line-height: 72px;
+     letter-spacing: 30px;
+     margin-bottom: 57px;
+     text-align: center;
+     text-indent: 24px;
+     text-transform: uppercase;
+}
+
+ .bold_uppercase{
+     font-weight: 700;
+     text-transform: uppercase;
+}
+
+ ul{
+     list-style: none;
+     margin: 0;
+     padding: 0;
+}
+/**######## END GLOBAL STYLES #########**/
+
+
+/**######## HEADER, NAV STYLES #########**/
+ header > div.container img{
+     float:left;
+     padding: 10px 0;
+     width: 13%;
+     margin: auto;
+}
+
+ header{
+     position: fixed;
+     width: 100%;
+     background: white;
+    /****** Drop shadow on the navigation bar *******/
+     -webkit-box-shadow: 0 2px 4px -1px rgba(0,0,0,0.06), 0 4px 5px 0 rgba(0,0,0,0.06), 0 1px 10px 0 rgba(0,0,0,0.08);
+     box-shadow: 0 2px 4px -1px rgba(0,0,0,0.06), 0 4px 5px 0 rgba(0,0,0,0.06), 0 1px 10px 0 rgba(0,0,0,0.08);
+     z-index: 9;
+}
+
+ header:after{
+     content: '';
+     display: table;
+     clear: both;
+}
+
+ nav{
+     float: right;
+}
+
+ nav li{
+     display: inline-block;
+     margin-left: 75px;
+     padding:20px 0;
+     position: relative;
+}
+
+ nav a{
+     color: #7e7e7e;
+     font-size: 1.1em;
+     line-height: 1em;
+     text-decoration: none;
+     text-transform: uppercase;
+}
+
+/** On mouse over text color change **/
+ nav a:hover{
+     color: #f49441;
+}
+
+/** line styling **/
+ nav a:before{
+     content: '';
+     display: block;
+     height: 3px;
+     background-color: #f49441;
+     position: absolute;
+     top: 0;
+     width: 0%;
+}
+
+/** On mouse over the line appears**/
+ nav a:hover::before{
+     width: 100%;
+     transition: all ease-in-out 190ms;
+}
+/**######## END HEADER, NAV STYLES #########**/
+
+/**######## SECTION 1 / LANDING #########**/
+ #backtotop{
+     background-image: url(../img/landing2.jpg);
+    /* Image is centered vertically and horizontally */
+     background-position: center center;
+     background-repeat: no-repeat;
+    /* Image fixed in the viewport so the content scrolls over it */
+     background-attachment: fixed;
+    /* Makes the background image rescale based on its container's size */
+     background-size: cover;
+    /* Just in case if the image does not load */
+     background-color:#464646;
+}
+ #backtotop h1{
+     color: white;
+     font-family: 'Cormorant Garamond';
+     font-size: 50px;
+     text-transform: uppercase;
+     text-shadow: 2px 1px #000;
+    /** Keeps the text centered vertically and horizontally **/
+     text-align: center;
+     position: relative;
+     top: 35%;
+     transform: translateY(-35%);
+}
+/** Breaks the sentence without using <br> **/
+ #backtotop span{
+     display: block;
+}
+/**######## END SECTION 1 / LANDING #########**/
+
+
+
+/**######## SECTION 2,3 / LUNCH / DINNER #########**/
+/** Changes the font color to black in this 2 ids **/
+#dinner .maintitle, #lunch .maintitle{
+    color:#000;
+}
+#food_items {
+    width: 100%;
+    padding: 10px;
+    height: 300px;
+}
+#food_items ul{
+    float: left;
+    color: black;
+}
+#food_items ul > li > h5{
+    margin-bottom: .9em;
+    color: #FF9800;
+}
+/** Removes the first heading margin-top, in the list **/
+#food_items li:first-child h5{
+    margin-top: 0;
+}
+#food_items span{
+    font-weight: bold;
+    margin-left: 10px;
+}
+#food_items img{
+    float: right;
+   /** Responsive image **/
+    max-width: 37%;
+    height: auto;
+}
+/**######## END SECTION 2,3 / LUNCH / DINNER #########**/
+
+
+
+
+/**######## SECTION 4 / LOCATION #########**/
+ #location{
+     background-color: rgba(111, 111, 111, 0.75);
+     color: white;
+}
+.col_left ul>li{
+    padding: 5px 0 5px 0;
+}
+.col_left{
+    float: left;
+    width: 49%;
+}
+.col_right{
+    float: right;
+    width: 50%;
+}
+.col_right iframe{
+    width: 100%;
+    float: left;
+}
+.hours_operation {
+padding-left: 0px;
+}
+.hours_operation li span{
+  float: left;
+	width: 7em;
+  font-weight: bold;
+}
+
+/**######## END SECTION 4 / LOCATION #########**/
+
+
+
+/**######## BACK TO TOP BUTTON  #########**/
+ #button {
+     display: none;
+     background-color: #FF9800;
+     width: 50px;
+     height: 43px;
+     text-align: center;
+     border-radius: 4px;
+     margin: 0px;
+     position: fixed;
+     bottom: 30px;
+     right: 30px;
+     transition: background-color .3s;
+     z-index: 1000;
+     font-size:2em;
+     color:white;
+}
+ #button:hover {
+     cursor: pointer;
+     background-color: #333;
+}
+ #button:active {
+     background-color: #555;
+}
+ #button::after {
+     color: #fff;
+}
+/**######## END BACK TO TOP BUTTON  #########**/
+
+
+
+/**######## FOOTER #########**/
+ footer{
+     background-color: #2b2b2b;
+}
+ footer p{
+     color:white;
+     font-size: 10pt;
+     padding-top:30px;
+     margin: 0;
+}
+ footer img{
+     position: relative;
+     width: 13%;
+     display: block;
+     top: -25px;
+     margin-left: auto;
+     margin-right: auto
+}
+/**######## END FOOTER #########**/
